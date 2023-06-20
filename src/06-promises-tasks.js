@@ -120,8 +120,7 @@ function chainPromises(array, action) {
             results.push(value);
             processPromise(index + 1);
           })
-          .catch((error) => {
-            console.error(error);
+          .catch(() => {
             processPromise(index + 1);
           });
       }
